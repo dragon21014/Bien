@@ -20,14 +20,21 @@ def create
 #take info from the form and add it to the database
 @review = Review.new(form_params)
 
-#save this to the database
 
-@review.save
+#we wat to check if the model can be saved
+#if it is, we're going to the homepage again
+#if it isn't, show the new form
 
-#redirect back to the homepage
-
-redirect_to  root_path
+if @review.save
+  redirect_to root_path
+else
+  #show the view for new.html.erb
+  render "new"
 end
+
+end
+
+
 
 def show
 #indvidual review page
@@ -54,20 +61,32 @@ def edit
 
 end
 
+
+
 def update
   #find the indvidaul review
   @review = Review.find(params[:id])
 
   #Update with the new info form the form
-  @review.update(form_params)
+  if @review.update(form_params)
 
-#redirect somewhere new
-redirect_to review_path(@review)
+      #redirect somewhere new
+      redirect_to review_path(@review)
+else
+
+render "edit"
 
 end
+
+
+end
+
+
 
 def form_params
   params.require(:review).permit(:title, :body, :score)
 
 end
+
+#Test to see if the git hub save works
 end
