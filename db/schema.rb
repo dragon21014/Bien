@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 2018_09_09_005540) do
     t.datetime "updated_at", null: false
     t.string "phone_number"
     t.string "ambiance"
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
   end
 
 end

@@ -5,6 +5,7 @@ def index
 
 @price = params[:price]
 @cuisine = params[:cuisine]
+@location = params[:location]
 
 #start with all the reviews
 
@@ -23,6 +24,14 @@ end
 
 end
 
+#Searh near the location
+
+if @location.present?
+  @reviews = @reviews.near(@location)
+end
+
+end
+
 def new
 # the form for adding a new review
   @review = Review.new
@@ -34,7 +43,7 @@ def create
 @review = Review.new(form_params)
 
 
-#we wat to check if the model can be saved
+#we want to check if the model can be saved
 #if it is, we're going to the homepage again
 #if it isn't, show the new form
 
@@ -80,7 +89,7 @@ def update
   #find the indvidaul review
   @review = Review.find(params[:id])
 
-  #Update with the new info form the form
+  #Update with the new info from the form
   if @review.update(form_params)
 
       #redirect somewhere new
@@ -103,4 +112,3 @@ def form_params
 end
 
 #Test to see if the git hub save works
-end

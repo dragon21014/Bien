@@ -25,6 +25,12 @@
   </div>
 <% end %>
 
+<% if@review.address.present? %>
+<div class="address">
+  Address: <%= @review.address %>
+</div>
+<% end %>
+
 
 <div class="body">
 <%= simple_format @review.body %>
