@@ -24,11 +24,29 @@
 <p>
   <%= f.label :restaurant %>
   <%= f.text_field :restaurant %>
+</P>
+
+<p>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+</p>
 
 <p>
   <%= f.label :body %>
   <%= f.text_area :body %>
 </p>
+
+<p>
+  <%= f.label :cuisine %>
+  <%= f.text_field :cuisine %>
+</p>
+
+<p>
+  <%= f.label :price %>
+  <%= f.number_field :price, within: 1..3 %>
+</p>
+
+
 
 <p>
   <%= f.label :score %>
