@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Work+Sans:400,700');
 
 
-
-
 $green: #3BC8AA;
 $orange: #FF551A;
 $black: #1E1E1E;
@@ -16,7 +14,6 @@ $bodyFont: "Work Sans";
 * {
   box-sizing: border-box;
 }
-
 
 body {
   color: $black;
@@ -89,13 +86,13 @@ nav.filters {
   font-size: 14px;
   border-bottom: 2px solid $lightyellow;
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
 a {
-margin: 0 5px 0 0;
-text-decoration: none;
-color: $black;
+  margin: 0 5px 0 0;
+  text-decoration: none;
+  color: $black;
 }
 
 div, form {

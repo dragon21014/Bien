@@ -3,20 +3,20 @@
 
 
 <% if @review.errors.any? %>
-<div class="errors">
+  <div class="errors">
 
 <% @review.errors.full_messages.each do |message| %>
-<p><%= message %></P>
+  <p><%= message %></P>
 <% end %>
 
 
-</div>
+  </div>
 <% end %>
 
 
 
 
-  <p>
+<p>
   <%= f.label :title %>
   <%= f.text_field :title %>
 </p>
@@ -45,8 +45,6 @@
   <%= f.label :price %>
   <%= f.number_field :price, within: 1..3 %>
 </p>
-
-
 
 <p>
   <%= f.label :score %>

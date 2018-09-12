@@ -13,31 +13,31 @@ class ReviewsController < ApplicationController
 
     #filtering by price
     if @price.present?
-      @reviews = @reviews.where(price: @price)
+        @reviews = @reviews.where(price: @price)
     end
 
     #filter by cuisine
 
     if @cuisine.present?
-      @reviews = @reviews.where(cuisine: @cuisine)
+        @reviews = @reviews.where(cuisine: @cuisine)
     end
 
 
-    #Searh near the location
+    #Search near the location
 
     if @location.present?
-      @reviews = @reviews.near(@location)
+        @reviews = @reviews.near(@location)
     end
   end
 
   def new
     # the form for adding a new review
-    @review = Review.new
+      @review = Review.new
   end
 
   def create
     #take info from the form and add it to the database
-    @review = Review.new(form_params)
+      @review = Review.new(form_params)
 
     #we want to check if the model can be saved
     #if it is, we're going to the homepage again
@@ -53,15 +53,15 @@ class ReviewsController < ApplicationController
 
   def show
     #indvidual review page
-    @review = Review.find(params[:id])
+      @review = Review.find(params[:id])
   end
 
   def destroy
     #find the indvidiaul review
-    @review = Review.find(params[:id])
+      @review = Review.find(params[:id])
 
     #destroy
-    @review.destroy
+      @review.destroy
 
     #redirect to the home page
     redirect_to root_path
@@ -69,12 +69,12 @@ class ReviewsController < ApplicationController
 
   def edit
     #find the indvidual review (to edit)
-    @review = Review.find(params[:id])
+      @review = Review.find(params[:id])
   end
 
   def update
     #find the indvidaul review
-    @review = Review.find(params[:id])
+      @review = Review.find(params[:id])
 
     #Update with the new info from the form
     if @review.update(form_params)
