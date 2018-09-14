@@ -29,6 +29,12 @@ gem 'jbuilder', '~> 2.5'
 #add in our geocoding
 gem 'geocoder'
 
+#Make our forms nice and Easy
+gem 'simple_form'
+
+# make our filters active
+gem 'active_link_to'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 # Use Capistrano for deployment

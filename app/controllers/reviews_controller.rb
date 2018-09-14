@@ -19,14 +19,14 @@ class ReviewsController < ApplicationController
     #filter by cuisine
 
     if @cuisine.present?
-        @reviews = @reviews.where(cuisine: @cuisine)
+      @reviews = @reviews.where('lower(cuisine) = lower(?)', @cuisine)
     end
 
 
     #Search near the location
 
     if @location.present?
-        @reviews = @reviews.near(@location)
+        @reviews = @reviews.near(@location + ", Adelaide")
     end
   end
 
