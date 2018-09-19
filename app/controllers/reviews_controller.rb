@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
     #filter by cuisine
 
     if @cuisine.present?
-      @reviews = @reviews.where('lower(cuisine) = lower(?)', @cuisine)
+      @reviews = @reviews.where('lower(trim(cuisine)) = lower(trim(?))', @cuisine)
     end
 
 
