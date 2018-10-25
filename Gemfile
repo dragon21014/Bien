@@ -82,6 +82,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-
-
-ruby "2.5.1"
+ruby "2.5.3"
