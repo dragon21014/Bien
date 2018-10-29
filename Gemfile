@@ -52,6 +52,9 @@ gem 'active_link_to'
 #make sure no one is swearing
 gem "profanity_filter"
 
+#lets add uploading files
+gem 'carrierwave', '~> 1.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 # Use Capistrano for deployment
@@ -82,4 +85,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-ruby "2.5.1"
+ruby "2.3.3"
