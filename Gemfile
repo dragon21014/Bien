@@ -54,6 +54,7 @@ gem "profanity_filter"
 
 #lets add uploading files
 gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -85,4 +86,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-ruby "2.3.3"
+ruby "2.5.1"
