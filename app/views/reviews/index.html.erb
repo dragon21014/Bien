@@ -35,7 +35,9 @@
 <div class="review">
   <%= link_to review_path(review) do %>
 
+<% if @review.photo.thumb.present? %>
   <%= image_tag review.photo.thumb %>
+    <% end %>
 
     <h2><%= review.title %> </h2>
     <p><%= review.cuisine %> -
