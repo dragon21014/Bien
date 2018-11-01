@@ -10,6 +10,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #size to fit the maximum width and height
   process resize_to_fit: [1200, 800]
 
+  version :medium do
+    process resize_to_fit: [600, 400]
+  end 
+
   version :thumb do
     process resize_to_fill: [150, 150]
   end
