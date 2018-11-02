@@ -42,6 +42,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 #add in our geocoding
 gem 'geocoder'
+gem 'openssl', '>=2.0.3'
 
 #Make our forms nice and Easy
 gem 'simple_form'
@@ -54,6 +55,7 @@ gem "profanity_filter"
 
 #lets add uploading files
 gem 'carrierwave', '~> 1.0'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -85,4 +87,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-ruby "2.3.3"
+ruby "2.5.1"
