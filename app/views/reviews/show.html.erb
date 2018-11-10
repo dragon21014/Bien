@@ -76,7 +76,7 @@
 
 </div>
 
-<% if @review.user == @current_user %>
+<% if @current_user.present? and @review.user == @current_user %>
 <div class="actions">
 
   <% if @review.created_at > 1.hour.ago %>
