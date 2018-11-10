@@ -7,7 +7,7 @@ ruby '2.3.3'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 group :development do
-gem 'sqlite3'
+  gem 'sqlite3', git: "https://github.com/sparklemotion/sqlite3-ruby"
 end
 
 group :production do
