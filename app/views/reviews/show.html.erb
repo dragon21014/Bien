@@ -1,8 +1,8 @@
 <% content_for :page_title, @review.title %>
 
 <% if @review.photo.present? %>
-  <%= image_tag @review.photo.url %>
-  <% end %> 
+  <%= image_tag @review.photo.medium.url %>
+  <% end %>
 
 <h1><%= @review.title %> </h1>
 <h2><%= @review.restaurant %></h2>
